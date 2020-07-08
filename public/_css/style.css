@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(0, 200, 30);
+    color: #666666;
+}
+
+.borderGreen {
+    border: 4px solid green;
+}
+
+div#interfaceForm {
+    background-color: white;
+    text-align: left;
+    width: 540px;
+    height: 290px;
+    margin: auto;
+}
+
+div#interfaceForm form {
+    width: 400px;
+    margin: auto;
+    padding-top: 20px;
+    background: url('../_images/icone-contato.png') no-repeat 95% 95%;
+}
+
+div#interfaceForm legend {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+div#interfaceForm .formItem {
+    width: 150px;
+    height: 25px;
+}
+
+div#interfaceList {
+    background-color: white;
+    width: 1200px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+div#interfaceList ul#usersList {
+    list-style: none;
+}
+
+div#interfaceList ul#usersList li {
+    box-shadow: 2px 2px 7px greenyellow;
+    display: inline-block;
+    text-align: left;
+    margin-left: 70px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+div#interfaceList ul#usersList button {
+    border-style: none;
+    height: 30px;
+    width: 70px;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+div#interfaceList ul#usersList button:hover {
+    background-color: #666666;
+    color: white;
+}
