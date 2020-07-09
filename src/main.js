@@ -1,27 +1,70 @@
 import ControllerUsuario from './controllerUsuario'
 
 const controller = new ControllerUsuario();
-const formEl = document.querySelector('#form');
-const inputNameEl = document.querySelector('#nameCreate');
-const inputEmailEl = document.querySelector('#emailCreate');
-const inputAgeEl = document.querySelector('#ageCreate');
+
+const formCreateEl = document.querySelector('#formCreate');
+const formUpdateEl = document.querySelector('#formUpdate');
+
+const inputNameCreateEl = document.querySelector('#nameCreate');
+const inputEmailCreateEl = document.querySelector('#emailCreate');
+const inputAgeCreateEl = document.querySelector('#ageCreate');
+
+const inputIdUpdateEl = document.querySelector('#idUpdate');
+const inputNameUpdateEl = document.querySelector('#nameUpdate');
+const inputEmailUpdateEl = document.querySelector('#emailUpdate');
+const inputAgeUpdateEl = document.querySelector('#ageUpdate');
+
 const listEl = document.querySelector('#usersList');
 
-formEl.onsubmit = event => addUser(event);
+formCreateEl.onsubmit = event => addUser(event);
 
 function addUser(event) {
     event.preventDefault();
     
-    const name = inputNameEl.value;
-    const email = inputEmailEl.value;
-    const age = inputAgeEl.value;
+    const name = inputNameCreateEl.value;
+    const email = inputEmailCreateEl.value;
+    const age = inputAgeCreateEl.value;
 
     if(name.length === 0 || email.length === 0 || age.length === 0) {
         alert('Preencha todos os campos!');
         return;
     }
+    
+    formCreateEl.reset();
 
     controller.addUser(name, email, age),
+    render();
+}
+
+formUpdateEl.onsubmit = event => updateUser(event);
+
+function updateUser(event) {
+    event.preventDefault();
+
+    const id = inputIdUpdateEl.value;
+    const name = inputNameUpdateEl.value;
+    const email = inputEmailUpdateEl.value;
+    const age = inputAgeUpdateEl.value;
+
+    if(name.length === 0 && email.length === 0 && age.length === 0) {
+        alert('Preencha os campos para atualizar os dados!');
+        return;
+    }
+    
+    if(id.length === 0) {
+        alert('É necessário que seja informado um ID válido!');
+        return;
+    }
+    
+    const user = controller.findUser(id);
+    if(user === false) {
+        alert('Não há um usuário com este ID.')
+        return;
+    }
+
+    formUpdateEl.reset();
+    
+    controller.updateUserData(user, name, email, age);
     render();
 }
 
@@ -65,3 +108,5 @@ function render() {
         listEl.appendChild(listItem);
     })
 }
+
+
