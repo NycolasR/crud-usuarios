@@ -13,8 +13,4 @@ export default class ControllerUsuario {
     removeUser(position) {
         this.users.splice(position, 1);
     }
-
-    render() {
-        this.users.forEach(user => console.log(user));
-    }
 }

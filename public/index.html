@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C.R.U.D. para Usuários</title>
     <link rel="stylesheet" href="_css/style.css">
 </head>
@@ -12,7 +11,7 @@
                 <fieldset>
                     <legend>Informações do Usuário</legend>
                     <p><input class="formItem" type="text" id="name" placeholder="Nome *"></p>
-                    <p><input class="formItem" type="text" id="email" placeholder="E-mail *"></p>
+                    <p><input class="formItem" type="email" id="email" placeholder="E-mail *"></p>
                     <p><input class="formItem" type="number" id="age" placeholder="Idade *" min="0"></p>
                     <p><button class="formItem" type="submit">Confirmar</button></p>
                 </fieldset>
@@ -20,50 +19,7 @@
     </div>
 
     <div id="interfaceList" class="borderGreen">
-        <ul id="usersList">
-            <li>
-                <h2>Nycolas:</h2>
-                <p>E-mail: ---------------------@gmail.com</p>
-                <p>Idade: 19 anos</p>
-                <p>Id: 1</p>
-                <p><button>Excluir</button></p>
-            </li>
-            <li>
-                <h2>Nycolas:</h2>
-                <p>E-mail: ---------------------@gmail.com</p>
-                <p>Idade: 19 anos</p>
-                <p>Id: 1</p>
-                <p><button>Excluir</button></p>
-            </li>
-            <li>
-                <h2>Nycolas:</h2>
-                <p>E-mail: ---------------------@gmail.com</p>
-                <p>Idade: 19 anos</p>
-                <p>Id: 1</p>
-                <p><button>Excluir</button></p>
-            </li>
-            <li>
-                <h2>Nycolas:</h2>
-                <p>E-mail: ---------------------@gmail.com</p>
-                <p>Idade: 19 anos</p>
-                <p>Id: 1</p>
-                <p><button>Excluir</button></p>
-            </li>
-            <li>
-                <h2>Nycolas:</h2>
-                <p>E-mail: ---------------------@gmail.com</p>
-                <p>Idade: 19 anos</p>
-                <p>Id: 1</p>
-                <p><button>Excluir</button></p>
-            </li>
-            <li>
-                <h2>Nycolas:</h2>
-                <p>E-mail: ---------------------@gmail.com</p>
-                <p>Idade: 19 anos</p>
-                <p>Id: 1</p>
-                <p><button>Excluir</button></p>
-            </li>
-        </ul>
+        <ul id="usersList"></ul>
     </div>
 
     <script src="./bundle.js"></script>
