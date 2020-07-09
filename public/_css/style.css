@@ -11,16 +11,25 @@ body {
 div#interfaceForm {
     background-color: white;
     text-align: left;
-    width: 540px;
-    height: 290px;
+    width: 900px;
+    height: 325px;
     margin: auto;
+    padding-left: 60px;
+    text-align: center;
 }
 
 div#interfaceForm form {
     width: 400px;
+    height: 290px;
     margin: auto;
     padding-top: 20px;
+    margin-right: 20px;
     background: url('../_images/icone-contato.png') no-repeat 95% 95%;
+    float: left;
+}
+
+div#interfaceForm form fieldset {
+    height: 270px;
 }
 
 div#interfaceForm legend {
@@ -31,6 +40,9 @@ div#interfaceForm legend {
 div#interfaceForm .formItem {
     width: 150px;
     height: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #555;
+    transition: 0.7s;
 }
 
 div#interfaceList {
@@ -53,15 +65,16 @@ div#interfaceList ul#usersList li {
     padding: 10px;
 }
 
-div#interfaceList ul#usersList button {
+button {
     border-style: none;
-    height: 30px;
-    width: 70px;
+    border-radius: 10px;
+    height: 40px;
+    width: 75px;
     cursor: pointer;
     transition: 0.7s;
 }
-
-div#interfaceList ul#usersList button:hover {
+button:hover {
     background-color: #666666;
     color: white;
+    cursor: pointer;
 }

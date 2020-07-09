@@ -2,9 +2,9 @@ import ControllerUsuario from './controllerUsuario'
 
 const controller = new ControllerUsuario();
 const formEl = document.querySelector('#form');
-const inputNameEl = document.querySelector('#name');
-const inputEmailEl = document.querySelector('#email');
-const inputAgeEl = document.querySelector('#age');
+const inputNameEl = document.querySelector('#nameCreate');
+const inputEmailEl = document.querySelector('#emailCreate');
+const inputAgeEl = document.querySelector('#ageCreate');
 const listEl = document.querySelector('#usersList');
 
 formEl.onsubmit = event => addUser(event);

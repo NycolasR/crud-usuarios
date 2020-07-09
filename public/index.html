@@ -7,15 +7,26 @@
 </head>
 <body>
     <div id="interfaceForm" class="borderGreen">
-            <form id="form">
-                <fieldset>
-                    <legend>Informações do Usuário</legend>
-                    <p><input class="formItem" type="text" id="name" placeholder="Nome *"></p>
-                    <p><input class="formItem" type="email" id="email" placeholder="E-mail *"></p>
-                    <p><input class="formItem" type="number" id="age" placeholder="Idade *" min="0"></p>
-                    <p><button class="formItem" type="submit">Confirmar</button></p>
-                </fieldset>
-            </form>
+        <form id="form" class="form">
+            <fieldset id="create">
+                <legend>Informações do Usuário</legend>
+                <p><input class="formItem" type="text" id="nameCreate" placeholder="Nome *"></p>
+                <p><input class="formItem" type="email" id="emailCreate" placeholder="E-mail *"></p>
+                <p><input class="formItem" type="number" id="ageCreate" placeholder="Idade *" min="0"></p>
+                <p><button type="submit">Confirmar</button></p>
+            </fieldset>
+        </form>
+
+        <form id="formUpdate" class="form">
+            <fieldset id="update">
+                <legend>Atualização de Dados</legend>
+                <p><input class="formItem" type="text" id="idUpdate" placeholder="ID *"></p>
+                <p><input class="formItem" type="text" id="nameUpdate" placeholder="Nome"></p>
+                <p><input class="formItem" type="email" id="emailUpdate" placeholder="E-mail"></p>
+                <p><input class="formItem" type="number" id="ageUpdate" placeholder="Idade" min="0"></p>
+                <p><button type="submit">Atualizar</button></p>
+            </fieldset>
+        </form>
     </div>
 
     <div id="interfaceList" class="borderGreen">
