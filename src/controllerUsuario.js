@@ -6,8 +6,8 @@ export default class ControllerUsuario {
         this.counter = 0;
     }
 
-    addUser(name, email, age) {
-        const user = new User(name, email, age, this.counter);
+    addUser(name, email, birthday) {
+        const user = new User(name, email, birthday, this.counter);
         this.counter++;
         this.users.push(user);
     }
@@ -36,15 +36,15 @@ export default class ControllerUsuario {
         return false;
     }
 
-    updateUserData(user, name=null, email=null, age=null) {
+    updateUserData(user, name=null, email=null, birthday=null) {
         if(name.length !== 0) {
             user.name = name;
         }
         if(email.length !== 0) {
             user.email = email;
         }
-        if(age.length !== 0) {
-            user.age = age;
+        if(birthday.length !== 0) {
+            user.birthday = birthday;
         }
     }
 }

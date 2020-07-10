@@ -7,12 +7,12 @@ const formUpdateEl = document.querySelector('#formUpdate');
 
 const inputNameCreateEl = document.querySelector('#nameCreate');
 const inputEmailCreateEl = document.querySelector('#emailCreate');
-const inputAgeCreateEl = document.querySelector('#ageCreate');
+const inputBirthdayCreateEl = document.querySelector('#birthdayCreate');
 
 const inputIdUpdateEl = document.querySelector('#idUpdate');
 const inputNameUpdateEl = document.querySelector('#nameUpdate');
 const inputEmailUpdateEl = document.querySelector('#emailUpdate');
-const inputAgeUpdateEl = document.querySelector('#ageUpdate');
+const inputBirthdayUpdateEl = document.querySelector('#birthdayUpdate');
 
 const listEl = document.querySelector('#usersList');
 
@@ -23,16 +23,16 @@ function addUser(event) {
     
     const name = inputNameCreateEl.value;
     const email = inputEmailCreateEl.value;
-    const age = inputAgeCreateEl.value;
+    const birthday = inputBirthdayCreateEl.value;
 
-    if(name.length === 0 || email.length === 0 || age.length === 0) {
+    if(name.length === 0 || email.length === 0 || birthday.length === 0) {
         alert('Preencha todos os campos!');
         return;
     }
     
     formCreateEl.reset();
 
-    controller.addUser(name, email, age),
+    controller.addUser(name, email, birthday),
     render();
 }
 
@@ -44,9 +44,9 @@ function updateUser(event) {
     const id = inputIdUpdateEl.value;
     const name = inputNameUpdateEl.value;
     const email = inputEmailUpdateEl.value;
-    const age = inputAgeUpdateEl.value;
+    const birthday = inputBirthdayUpdateEl.value;
 
-    if(name.length === 0 && email.length === 0 && age.length === 0) {
+    if(name.length === 0 && email.length === 0 && birthday.length === 0) {
         alert('Preencha os campos para atualizar os dados!');
         return;
     }
@@ -64,7 +64,7 @@ function updateUser(event) {
 
     formUpdateEl.reset();
     
-    controller.updateUserData(user, name, email, age);
+    controller.updateUserData(user, name, email, birthday);
     render();
 }
 
@@ -79,7 +79,7 @@ function render() {
         emailEl.appendChild(document.createTextNode(`E-mail: ${user.email}`));
 
         let ageEl = document.createElement('p');
-        ageEl.appendChild(document.createTextNode(`Idade: ${user.age}`));
+        ageEl.appendChild(document.createTextNode(`Idade: ${user.calculateAge()}`));
 
         let idEl = document.createElement('p');
         idEl.appendChild(document.createTextNode(`ID: ${user.id}`));
@@ -108,5 +108,3 @@ function render() {
         listEl.appendChild(listItem);
     })
 }
-
-
