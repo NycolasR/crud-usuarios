@@ -12,15 +12,15 @@ div.borderGreen {
 
 div#interfaceForm {
     text-align: left;
-    width: 900px;
+    width: 980px;
     height: 350px;
     margin: auto;
     padding-left: 60px;
-    text-align: center;
+    text-align: left;
 }
 
 div#interfaceForm form {
-    width: 400px;
+    width: 450px;
     height: 290px;
     margin: auto;
     padding-top: 20px;

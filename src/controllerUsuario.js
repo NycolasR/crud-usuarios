@@ -7,8 +7,7 @@ export default class ControllerUsuario {
     }
 
     addUser(name, email, birthday) {
-        const user = new User(name, email, birthday, this.counter);
-        this.counter++;
+        const user = new User(name, email, birthday, this.counter++);
         this.users.push(user);
     }
 
